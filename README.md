@@ -16,14 +16,19 @@ The testing framework is based on simple principles. Apps on *cf* have to be tes
 
 ### Components of the Test Framework
 --
+There are three main components of the Test Framework. 
 
-There are three main components of the Test Framework. The test applications with the ci pipelines are in the [cf-test-harness](https://github.com/rjain-pivotal/cf-test-harness) git repo. [Concourse] (http://concourse.ci) is used for build, deploy and running the test applications to cloud foundry. And finally the *radiator* dashboard is a dashboard which looks at all the apps deployed in the  org/space of cloud foundry which the user is authorized to, and checks the /health endpoint.
+1. The test applications with the ci pipelines are in the [cf-test-harness](https://github.com/rjain-pivotal/cf-test-harness) git repo.
+2. [Concourse] (http://concourse.ci) is used for build, deploy and running the test applications to cloud foundry. 
+3. And finally the *radiator* dashboard is a dashboard which looks at all the apps deployed in the  org/space of cloud foundry which the user is authorized to, and checks the /health endpoint.
 
-![Big Picture](images/process.png)
+
 
 ### CF Test Harness
 
 [Git Repo](https://github.com/rjain-pivotal/cf-test-harness)
+
+![Big Picture](images/process.png)
 
 This test harness has a series of apps which tests buildpacks, cf components and services. Each of the test has a /health, /info and /metrics endpoint. The test case for unit, integration and load test would update the /health, /metrics endpoint after the test is executed.
 
@@ -99,6 +104,7 @@ This will go recursively in every test directory and deploy the ci/pipeline.yml 
 You should see all you concourse pipelines ready to execute in your concourse dashboard e.g. below.
 
 There are three triggers for your concourse pipelines
+
 1. If there is a code change in the test harness, the git webhook will trigger the pipeline
 2. Every hour the complete pipeline of "build, deploy, test, report" will be executed.
 3. Every five minutes, only the "test, report" pipeline will be executed.
