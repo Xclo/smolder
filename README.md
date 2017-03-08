@@ -6,7 +6,7 @@ The application developers would like to see if their code is not broken - eithe
 The cloud foundry operators would like to see that the updates to the platform in not breaking any application development focused tests -- e.g. buildpack test, uaa test, connectivity to services tests.
 
 The assumption is that each test in the testing harness has few rest endpoints /health, /metrics , /info which will provide the details on if the test is working or if the test is broken. The test harness draws inspiration from
-[Spring Actuator Project]( (http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)
+[Spring Actuator Project](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)
 
 
 ### Big Picture
@@ -16,10 +16,10 @@ The testing framework is based on simple principles. Apps on *cf* have to be tes
 
 ### Components of the Test Framework
 --
-There are three main components of the Test Framework. 
+There are three main components of the Test Framework.
 
 1. The test applications with the ci pipelines are in the [cf-test-harness](https://github.com/rjain-pivotal/cf-test-harness) git repo.
-2. [Concourse] (http://concourse.ci) is used for build, deploy and running the test applications to cloud foundry. 
+2. [Concourse] (http://concourse.ci) is used for build, deploy and running the test applications to cloud foundry.
 3. And finally the *radiator* dashboard is a dashboard which looks at all the apps deployed in the  org/space of cloud foundry which the user is authorized to, and checks the /health endpoint.
 
 
