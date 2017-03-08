@@ -65,7 +65,7 @@ Here is an example of the test harness written for the Platform Operators, which
 #### Step 2: Connect to your Concourse Server
 
 Assuming that you have a concourse server, e.g concourse-s0.rjainpcf.com and a team with the name smolder-test
-(Refer here on how to create teams in Concourse : https://concourse.ci/fly-set-team.html)
+(Refer here on how to [create teams in Concourse](https://concourse.ci/fly-set-team.html)
 
 ```
    fly -t aws login -c https://concourse-c0.gcp.rjainpcf.com -k --team-name smolder-test
@@ -96,7 +96,7 @@ Next, execute the command
    deploy-pipelines.sh ci/config.yml
 ```
 
-This will go recursively in every test directory and deploy the ci/pipeline.yml with the configuration from the ci/config.yml
+This will go recursively in every test directory and deploy the `ci/pipeline.yml` with the configuration from the top level `ci/config.yml`
 
 
 #### Step 4: Open up the Concourse Dashboard
@@ -111,7 +111,7 @@ There are three triggers for your concourse pipelines
 
 You can control the triggers by changing the pipeline.yml file.
 
-The basic pipeline is just executing a *unit test* which is very specific to the application. For example the java *unit test* will just execute the deployment of simple program and executing a "/" endpoint which updates the "/health" endpoint
+The basic pipeline is just executing a *unit test* which is very specific to the application. For example the java *unit test* will just execute the deployment of simple program and executing a `/` endpoint which updates the `/health` endpoint
 
 You can write more advanced test, which could execute a piece of code every time the test is run. You can also add additional jobs in the pipeline to execute *integration* and *load* tests. The nodejs pipeline does that.
 
