@@ -12,14 +12,14 @@ The assumption is that each test in the testing harness has few rest endpoints /
 ### Big Picture
 
 The testing framework is based on simple principles. Apps on *cf* have to be tested continuously and they have consistent endpoints to check if the test passed or failed.  
-![Big Picture](images/big.svg)
+![Big Picture](images/big.png)
 
 ### Components of the Test Framework
 --
 
 There are three main components of the Test Framework. The test applications with the ci pipelines are in the [cf-test-harness](https://github.com/rjain-pivotal/cf-test-harness) git repo. [Concourse] (http://concourse.ci) is used for build, deploy and running the test applications to cloud foundry. And finally the *radiator* dashboard is a dashboard which looks at all the apps deployed in the  org/space of cloud foundry which the user is authorized to, and checks the /health endpoint.
 
-![Big Picture](images/process.svg)
+![Big Picture](images/process.png)
 
 ### CF Test Harness
 
