@@ -74,7 +74,7 @@ Assuming that you have a concourse server, e.g concourse-s0.rjainpcf.com and a t
 #### Step 3: Deploy all the pipelines
 
 Once you are connected to the Concourse server, you can deploy all the pipelines to the server.
-Edit the config file in the ci/config.example folder and rename it as ci/config.yml
+Edit the config file in the `ci/config.example` and rename it as `ci/config.yml`
 The *cf-app-suffix* and *cf-app-domain*  are unique suffix and domain names for the apps so that they don't clash with other apps with the same name and domain name deployed in cloud foundry installation.
 
 ```
