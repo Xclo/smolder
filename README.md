@@ -5,7 +5,7 @@ The *Smolder* testing framework is for application developers who are pushing co
 The application developers would like to see if their code is not broken - either through unit/integration/load testing.
 The cloud foundry operators would like to see that the updates to the platform in not breaking any application development focused tests -- e.g. buildpack test, uaa test, connectivity to services tests.
 
-The assumption is that each test in the testing harness has few rest endpoints /health, /metrics , /info which will provide the details on if the test is working or if the test is broken. The test harness draws inspiration from
+The assumption is that each test in the testing harness has few rest endpoints **/health**, **/metrics** , **/info** which will provide the details on if the test is working or if the test is broken. The test harness draws inspiration from
 [Spring Actuator Project](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)
 
 
